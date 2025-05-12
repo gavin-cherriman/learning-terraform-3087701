@@ -68,11 +68,13 @@ module "alb" {
       target_id        = "aws_instance.blog.id"
     }
 
-http_tcp_listeners = {
+ listeners = {
+      ex-tcp = {
       port     = 80
       protocol = "HTTP"
-    
-}
+     }
+
+  }
   
 
   tags = {
